@@ -4,7 +4,7 @@ const slideUp = {
     initial: {
       opacity: 0,
       marginBottom: '-30px',
-      overflow: 'hidden',
+      // overflow: 'hidden',
     },
     animate: {
       opacity: 1,
@@ -20,20 +20,64 @@ const slideUp = {
     duration: 0.7,
   },
 };
+const slideUp2 = {
+  name: 'Slide Up2',
+  variants: {
+    initial: {
+      opacity: 0,
+      transform: 'translateY(20px)',
+      overflow: 'hidden',
+    },
+    animate: {
+      opacity: 1,
+      transform: 'translateY(0px)',
+    },
+    exit: {
+      opacity: 0,
+      transform: 'translateY(20px)',
+    },
+  },
+  transition: {
+    animationTimingFunction: 'ease-in-out',
+    duration: 0.7,
+  },
+};
+const slideUp3 = {
+  name: 'Slide Up3',
+  variants: {
+    initial: {
+      opacity: 0,
+      transform: 'translateY(-10px)',
+      
+    },
+    animate: {
+      opacity: 1,
+      transform: 'translateY(0px)',
+    },
+    exit: {
+      opacity: 0,
+      transform: 'translateY(-10px)',
+    },
+  },
+  transition: {
+    animationTimingFunction: 'ease-in-out',
+    duration: 0.7,
+  },
+};
 
 const line = {
   name: 'Line',
   variants: {
     initial: {
-      width: '0px',
+      // width: '0px',
       opacity: 0,
     },
     animate: {
-      width: '100%',
+      // width: '100%',
       opacity: 1,
     },
     exit: {
-      width: '0px',
+      // width: '0px',
       opacity: 0,
     },
   },
@@ -63,7 +107,7 @@ const slideRight = {
     },
   },
   transition: {
-    duration: 0.7,
+    duration: 0.3,
   },
 };
 
@@ -171,6 +215,8 @@ const opacity = {
 
 export const animations = {
   slideUp,
+  slideUp2,
+  slideUp3,
   line,
   slideRight,
   fadeBack,

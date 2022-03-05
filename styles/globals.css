@@ -2,6 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
+/* MONTSERRAT*/
+@font-face {
+  font-family: 'Montserrat';
+
+  src: local('Montserrat'),
+  local('Montserrat'),
+  url(../public/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
 @import './Preloader.css';
 @import './linearicons.css';
 
@@ -16,6 +25,22 @@ html {
   font-family: 'Oswald';
   scroll-behavior: smooth;
 }
+/* body::-webkit-scrollbar {
+  width: 1em;
+  background-color: transparent;
+  opacity: 0;
+}
+  */
+/* body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+} */
+ 
+/* body::-webkit-scrollbar-thumb {
+  background-color: #1a1520;
+  
+  /* outline: 1px solid slategrey; */
+  /* border-radius: 3px
+} */ 
 
 @tailwind base;
 @tailwind components;

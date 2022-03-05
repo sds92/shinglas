@@ -9,3 +9,5 @@ export { default as Preloader } from './Preloader/Preloader';
 export { default as Social } from './Social/Social';
 export { default as FullPage } from './Sections/FullPage';
 export { default as YM } from './YM';
+export { default as Logo } from './Svg/Logo';
+export { default as Lang } from './Lang/Lang';

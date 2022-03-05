@@ -1,4 +1,6 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
+
 import { Text } from '../../../lib';
 import styles from './Gallery.module.css';
 
@@ -9,8 +11,12 @@ export default function Gallery(props) {
   const [state, setState] = React.useState({
     hover: null,
   });
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+  });
+
   return (
-    <div id={`Gallery`} className={`py-20`}>
+    <div ref={ref} id={`Gallery`} className={`py-20`}>
       {gallery.title && (
         <Text className={`zero:text-xl sm:text-5xl text-center font-bold`}>{gallery.title}</Text>
       )}
@@ -25,7 +31,7 @@ export default function Gallery(props) {
       )}
       {gallery.imgs.length !== 0 && (
         <>
-          <div className={`flex gap-4 flex-wrap justify-center md:w-10/12 lg:w-8/12 mx-auto`}>
+          <div ref={ref} className={`flex gap-4 flex-wrap justify-center md:w-10/12 lg:w-8/12 mx-auto`}>
             {imgs.map((item, index) => (
               <div key={`IMG${index}`} className={``}>
                 <div

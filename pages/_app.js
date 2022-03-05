@@ -3,13 +3,13 @@ import React from 'react';
 import '../styles/tailwind.css';
 import { Head, Preloader, YM } from '../components/complicated';
 import theme from '../utils/theme';
-
-import { upload } from '../utils/pre';
+import { langs } from 'utils/langs';
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = React.useState(true);
   const [w, setW] = React.useState(undefined);
-  const data = upload(`${process.env.NEXT_PUBLIC_SITE_URL}`);
+  const [lang, setLang] = React.useState('en') 
+  const data = langs(lang);
 
   React.useEffect(() => {
     setW(window.innerWidth);
@@ -27,16 +27,18 @@ function MyApp({ Component, pageProps }) {
 
   const newProps = {
     menu: [
-      ['Главная', '#Main'],
-      ['Цены', '#Catalog'],
-      ['Преимущества', '#Advantages'],
-      ['Применение', '#Gallery'],
-      ['Контакты', '#Contacts'],
+      ['Main', '#Main'],
+      ['Products', '#Catalog'],
+      ['Advantages', '#Advantages'],
+      ['Usage', '#Gallery'],
+      ['Contacts', '#Contacts'],
     ],
     w: w,
     data: data,
     lgView: w >= 900,
-    theme: theme(process.env.NEXT_PUBLIC_THEME),
+    theme: theme('black'),
+    setLang,
+    lang,
     ...pageProps,
   };
 
@@ -49,7 +51,6 @@ function MyApp({ Component, pageProps }) {
           <Component {...newProps} />
         </>
       )}
-      <YM ymNum={newProps.data.api.ym}/>
     </>
   );
 }

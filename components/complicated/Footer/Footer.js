@@ -1,9 +1,8 @@
 import React from 'react';
-// import dynamic from 'next/dynamic';
+import Map from './Map';
 
 import { Icons } from '..';
 
-const Map = React.lazy(() => import('./Map'));
 
 export default function Footer(props) {
   const { theme, data } = props;
@@ -11,9 +10,7 @@ export default function Footer(props) {
   return (
     <>
       <div className={`h-96 cursor-default overflow-hidden`}>
-        <React.Suspense fallback={<div>Загрузка...</div>}>
           <Map contacts={data.contacts} />
-        </React.Suspense>
       </div>
       <footer className={`bg-${theme.bg.footer} overflow-hidden`}>
         <div className={`flex flex-col md:flex-row justify-between items-center h-full`}>

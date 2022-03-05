@@ -5,6 +5,10 @@ fontFamily['sans-serif'] = [
   'Oswald', // <-- Fira Sans is a default sans font now
   // <-- you may provide more font fallbacks here
 ];
+fontFamily['montserrat'] = [
+  'Montserrat', // <-- Fira Sans is a default sans font now
+  // <-- you may provide more font fallbacks here
+];
 
 module.exports = {
   content: ['./pages/**/*.{html,js}', './components/**/*.{html,js}'],
