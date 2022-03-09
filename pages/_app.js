@@ -41,13 +41,14 @@ function MyApp({ Component, pageProps }) {
     lang,
     ...pageProps,
   };
+  console.log("🚀", newProps.data)
 
   return (
     <>
       {loading && <Preloader {...newProps} />}
       {!loading && (
         <>
-          <Head head={newProps.data.content.head} theme={newProps.theme}></Head>
+          <Head head={newProps.data.app.head} theme={newProps.theme}></Head>
           <Component {...newProps} />
         </>
       )}

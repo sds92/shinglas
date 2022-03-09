@@ -7,7 +7,7 @@ import { Logo } from '../../';
 
 export default function Main(props) {
   const { theme, data, lgView, w } = props;
-  const { main } = data.content;
+  const { main } = data.app.content;
   const { contacts } = data;
   const { ref, inView, entry } = useInView({
     threshold: 0,

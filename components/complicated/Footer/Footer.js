@@ -10,7 +10,7 @@ export default function Footer(props) {
   return (
     <>
       <div className={`h-96 cursor-default overflow-hidden`}>
-          <Map contacts={data.contacts} />
+          <Map contacts={data.app.contacts} />
       </div>
       <footer className={`bg-${theme.bg.footer} overflow-hidden`}>
         <div className={`flex flex-col md:flex-row justify-between items-center h-full`}>

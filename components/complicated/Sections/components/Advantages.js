@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 
 export default function Advantages(props) {
   const { theme, data } = props;
-  const { advantages } = data.content;
+  const { advantages } = data.app.content;
 
   const { ref, inView, entry } = useInView({
     threshold: 0,

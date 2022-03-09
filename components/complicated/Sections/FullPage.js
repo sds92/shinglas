@@ -49,9 +49,9 @@ export default function FullPage({ ...props }) {
       </div>
       <Sections.Main {...props} />
       <Sections.Catalog {...props} />
-      <Sections.Advantages {...props} />
-      <Sections.Gallery {...props} />
-      <Sections.Contacts {...props} />
+      {/* <Sections.Advantages {...props} /> */}
+      {/* <Sections.Gallery {...props} /> */}
+      {/* <Sections.Contacts {...props} /> */}
     </>
   );
 }

@@ -61,11 +61,11 @@ export default function SM(props) {
             <a
               onClick={() => setIsActive(!isActive)}
               className={styles.burger_list_tel}
-              href={`tel:${data.contacts.phones[0]}`}
+              href={`tel:${data.app.contacts.phones[0]}`}
             >
-              {data.contacts.phones[0]}
+              {data.app.contacts.phones[0]}
             </a>
-            <p className={styles.burger_list_address}>{data.contacts.addresses[0].value}</p>
+            <p className={styles.burger_list_address}>{data.app.contacts.addresses[0].value}</p>
             <div className={`flex justify-center`}>
               <a className={`self-center`} href='#main'>
                 <Icons.Belplit24 extraClasses={`w-20 h-20`} fill={theme.logo}/>

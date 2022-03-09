@@ -8,7 +8,7 @@
 
   src: local('Montserrat'),
   local('Montserrat'),
-  url(../public/fonts/Montserrat-VariableFont_wght.ttf);
+  url('../public/fonts/Montserrat-Medium.ttf');
 }
 
 @import './Preloader.css';

@@ -5,20 +5,21 @@ import { useInView } from 'react-intersection-observer';
 import { animations } from '../../../../styles/animations';
 import { Button, Text } from '../../../lib';
 
+import { CategoryCard } from '../../';
+
 // react-menu
 import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu';
 import '@szhsin/react-menu/dist/index.css';
 
 import { Icons } from '../../';
-import { products as productsInit } from '../../../../data/products';
 
 export default function Catalog(props) {
-  const datafromDB = productsInit;
   const { theme, lgView, w, data } = props;
-  const { catalog } = data.content;
-  const [products, categories, nested] = datafromDB;
+  const { catalog } = data.app.content;
+  const { categories, products, app } = data;
+  // const [products, categories, nested] = datafromDB;
   const [state, setState] = React.useState({
-    chosen: nested ? `${categories[0].category}_${categories[0].items[0]}` : categories[0].category,
+    chosenCategory: categories[0].id,
     chosenId: 0,
     hover: null,
     show: false,
@@ -106,12 +107,12 @@ export default function Catalog(props) {
                             key={`LINK${index}`}
                             onClick={() => {
                               setState((state) => {
-                                return { ...state, chosen: item.category, chosenId: item.id };
+                                return { ...state, chosenCategory: item.id };
                               });
                             }}
                           >
                             <div className={`whitespace-nowrap text-transparent inset-0 text-center `}>
-                              {item.category.toUpperCase()}
+                              {item.title.toUpperCase()}
                               <div
                                 className={`${
                                   item.category === state.chosen
@@ -121,7 +122,7 @@ export default function Catalog(props) {
                                   theme.text.bodyTitle
                                 } active:font-normal`}
                               >
-                                {item.category.toUpperCase()}
+                                {item.title.toUpperCase()}
                               </div>
                             </div>
                           </div>
@@ -137,44 +138,12 @@ export default function Catalog(props) {
             {/* CATALOG ITEMS */}
             {lgView ? (
               <div className={`max-w-7xl mx-auto overflow-hidden flex flex-wrap items-center justify-center`}>
-                <div className={`basis-1/2`}>
-                  {Object.entries(catalog.items).map((item, i) => {
-                    return (
-                      state.chosenId === i && (
-                        <motion.div
-                          initial='initial'
-                          animate='animate'
-                          variants={animations.opacity.variants}
-                          transition={animations.opacity.transition}
-                        >
-                          <motion.div
-                            initial='initial'
-                            animate='animate'
-                            variants={animations.slideUp2.variants}
-                            transition={animations.slideUp2.transition}
-                          >
-                            <Text
-                              className={`zero:text-xl sm:text-5xl text-center font-bold text-bp_red whitespace-nowrap`}
-                            >
-                              {item[1].items[i].title}
-                            </Text>
-                          </motion.div>
-                          <motion.div
-                            initial='initial'
-                            animate='animate'
-                            variants={animations.slideUp3.variants}
-                            transition={animations.slideUp3.transition}
-                          >
-                            <Text className={`text-center font-light text-zinc-900 overflow-hidden`}>
-                              {item[1].items[i].text}
-                            </Text>
-                          </motion.div>
-                        </motion.div>
-                      )
-                    );
-                  })}
-                </div>
-                <div className={`basis-1/2`}>
+                <CategoryCard
+                  category={categories.find((item) => item.id === state.chosenCategory)}
+                  app={app}
+                  products={products.filter(item => item.categoryId === state.chosenCategory)}
+                />
+                {/* <div className={`basis-1/2`}>
                   <div className={`flex flex-wrap w-full justify-center`}>
                     {arr.map((item, index) => {
                       return (
@@ -209,7 +178,9 @@ export default function Catalog(props) {
                                 />
                                 {state.openProduct[index] && (
                                   <motion.div
-                                    className={`overflow-hidden absolute w-full text-center bg-bp_black bg-opacity-10 ${state.openProduct[index] ? 'h-full' : 'h-0'}`}
+                                    className={`overflow-hidden absolute w-full text-center bg-bp_black bg-opacity-10 ${
+                                      state.openProduct[index] ? 'h-full' : 'h-0'
+                                    }`}
                                     initial='initial'
                                     animate='animate'
                                     variants={animations.slideUp3.variants}
@@ -255,8 +226,8 @@ export default function Catalog(props) {
                       );
                     })}
                   </div>
-                </div>
-                <div className={`basis-1 self-start`}>
+                </div> */}
+                {/* <div className={`basis-1 self-start`}>
                   {Object.entries(catalog.items).map((item, i) => {
                     return (
                       state.chosenId === i && (
@@ -292,7 +263,7 @@ export default function Catalog(props) {
                       )
                     );
                   })}
-                </div>
+                </div> */}
               </div>
             ) : (
               <>
@@ -353,7 +324,7 @@ export default function Catalog(props) {
                 <br />
                 <hr />
                 <br />
-                <div className={`max-w-7xl mx-auto grow overflow-hidden flex items-start justify-center`}>
+                {/* <div className={`max-w-7xl mx-auto grow overflow-hidden flex items-start justify-center`}>
                   {Object.entries(catalog.items).map((item, i) => {
                     return (
                       state.chosenId === i && (
@@ -389,7 +360,7 @@ export default function Catalog(props) {
                       )
                     );
                   })}
-                </div>
+                </div> */}
               </>
             )}
           </div>

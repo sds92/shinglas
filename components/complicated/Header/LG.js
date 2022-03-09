@@ -37,7 +37,7 @@ export default function LG(props) {
         </div>
 
         <div className={`flex bg-white rounded-md py-1 px-1 items-center ${styles.contacts}`}>
-          <Social contacts={data.contacts} theme={theme} />
+          <Social contacts={data.app.contacts} theme={theme} />
           <Lang {...props} />
         </div>
       </div>
