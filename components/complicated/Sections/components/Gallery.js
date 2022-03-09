@@ -1,12 +1,13 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
+import ImgGrid from 'components/complicated/ImgGrid/ImgGrid';
 import { Text } from '../../../lib';
 import styles from './Gallery.module.css';
 
 export default function Gallery(props) {
   const { theme, data, w } = props;
-  const { gallery } = data.content;
+  const { gallery } = data.app.content;
   const imgs = gallery.imgs;
   const [state, setState] = React.useState({
     hover: null,
@@ -16,9 +17,9 @@ export default function Gallery(props) {
   });
 
   return (
-    <div ref={ref} id={`Gallery`} className={`py-20`}>
+    <div ref={ref} id={`Gallery`} className={`mt-20 `}>
       {gallery.title && (
-        <Text className={`zero:text-xl sm:text-5xl text-center font-bold`}>{gallery.title}</Text>
+        <Text className={`zero:text-xl sm:text-5xl text-center font-bold my-4`}>{gallery.title}</Text>
       )}
       {gallery.text && (
         <>
@@ -47,7 +48,7 @@ export default function Gallery(props) {
                     })
                   }
                 >
-                  <img className={``} src={`images/${data.url}/${item[0]}`} alt width='370' height='256' />
+                  <img className={``} src={`images/${item[0]}`} alt width='370' height='256' />
                   <div
                     className={`absolute inset-0 bg-black bg-opacity-30 md:bg-opacity-0 hover:bg-opacity-30 duration-500 transition-all overflow-hidden`}
                   >
@@ -69,6 +70,8 @@ export default function Gallery(props) {
           </div>
           <br />
           <hr />
+      <ImgGrid {...props}/>
+
         </>
       )}
     </div>

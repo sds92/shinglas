@@ -5,7 +5,7 @@ import styles from './FeedBack.module.css';
 import InputMask from 'react-input-mask';
 
 export default function FeedBack(props) {
-  const { theme, data } = props;
+  const { theme, data, contacts } = props;
   const router = useRouter();
   const [formStatus, setFormStatus] = React.useState('show');
   const [formState, setFormState] = React.useState({
@@ -30,10 +30,7 @@ export default function FeedBack(props) {
     let a = Promise.resolve(/^[а-я, А-Я, a-z, A-Z]{3,20}$/.test(formState.clientName));
     let b = Promise.resolve(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/.test(formState.clientPhone.replaceAll(' ', '')));
     let c = formState.body === '' ? true : Promise.resolve(/.{3,500}/.test(formState.body));
-    let d =
-      formState.clientEmail === ''
-        ? true
-        : Promise.resolve(
+    let d = Promise.resolve(
             /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(
               formState.clientEmail
             )
@@ -122,14 +119,14 @@ export default function FeedBack(props) {
       <form className={``}>
         {formStatus === 'show' && (
           <div className={`flex flex-wrap`}>
-            <div className={classes.ff}>
+            <div className={`w-full px-1 my-1`}>
               <div className={`form-wrap`} style={{ position: 'relative' }}>
-                {checkFormStatus[0] && <p className={styles.userFormAlert}>3 - 50 символов</p>}
+                {checkFormStatus[0] && <p className={styles.userFormAlert}>{contacts.form.errors.name}</p>}
                 <input
                   className={`${styles.userFormInput} ${checkFormStatus[0] ? `${styles.userFormAlertBorders}` : ``}`}
                   required
                   id='FeedBackFormClientName'
-                  placeholder='Имя'
+                  placeholder={contacts.form.placeholders.name}
                   value={formState.clientName}
                   onChange={(e) =>
                     setFormState((state) => {
@@ -139,35 +136,16 @@ export default function FeedBack(props) {
                 />
               </div>
             </div>
-            <div className={classes.ff}>
-              <div className={`form-wrap`} style={{ position: 'relative' }}>
-                {checkFormStatus[1] && <p className={styles.userFormAlert}>Не верный номер</p>}
-                <InputMask
-                  className={`${styles.userFormInput} ${checkFormStatus[1] ? `${styles.userFormAlertBorders}` : ``}`}
-                  required
-                  id='FeedBackFormClientPhone'
-                  placeholder='Телефон'
-                  type='tel'
-                  value={formState.clientPhone}
-                  onChange={(e) => {
-                    setFormState((state) => {
-                      return { ...state, clientPhone: e.target.value };
-                    });
-                  }}
-                  mask='+7\ (999) 999 99 99'
-                  maskChar='_'
-                />
-              </div>
-            </div>
+           
             <div className={`w-full px-1 my-1`}>
               <div className={`form-wrap`} style={{ position: 'relative' }}>
                 {checkFormStatus[2] && (
-                  <p className={styles.userFormAlert}>3 - 500 символов или оставьте поле пустым</p>
+                  <p className={styles.userFormAlert}></p>
                 )}
                 <textarea
                   className={`${styles.userFormInput} ${checkFormStatus[2] ? `${styles.userFormAlertBorders}` : ``}`}
                   id='FeedBackFormBody'
-                  placeholder='Сообщение'
+                  placeholder={contacts.form.placeholders.msg}
                   rows={4}
                   value={formState.body}
                   onChange={(e) =>
@@ -182,14 +160,15 @@ export default function FeedBack(props) {
             <div className={classes.ff}>
               <div className={`form-wrap`} style={{ position: 'relative' }}>
                 {checkFormStatus[3] && (
-                  <p className={styles.userFormAlert}>Введите корректный email или оставьте поле пустым</p>
+                  <p className={styles.userFormAlert}>{contacts.form.errors.email}</p>
                 )}
                 <input
                   className={`h-14 ${styles.userFormInput} ${checkFormStatus[3] ? `${styles.userFormAlertBorders}` : ``}`}
                   type='email'
                   id='FeedBackFormClientEmail'
-                  placeholder='E-mail'
+                  placeholder={contacts.form.placeholders.email}
                   value={formState.clientEmail}
+                  required
                   onChange={(e) =>
                     setFormState((state) => {
                       return { ...state, clientEmail: e.target.value };
@@ -203,7 +182,7 @@ export default function FeedBack(props) {
                 onClick={sendForm}
                 className={`cursor-pointer font-bold w-full whitespace-nowrap rounded-md shadow-md py-3.5 px-4 uppercase text-xl text-center text-${theme.text.buttons} bg-${theme.bg.buttons} hover:bg-${theme.bg.buttonsHover} active:scale-105`}
               >
-                Отправить
+                {contacts.form.sendButton}
               </div>
             </div>
           </div>

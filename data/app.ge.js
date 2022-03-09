@@ -1,138 +1,102 @@
 const appEN = {
-    url: '',
-    api: {
-      ym: '',
-      email: 'https://xn--j1ano.com/sendmail',
-      products: '',
-      serv: 'https://xn--j1ano.com/',
+  url: '',
+  api: {
+    ym: '',
+    email: 'https://xn--j1ano.com/sendmail',
+    products: '',
+    serv: 'https://xn--j1ano.com/',
+  },
+  title: 'Trading House «CSK» Ltd.',
+  copyright: ['© 2022 Powered by <a href="https://roboweb.team/" target=\"_blank\" rel=\"noopener noreferrer\"><strong>RoboWeb</strong></a>'],
+  productTitle: 'МДВП',
+  contacts: {
+    title: 'Kontakte',
+    formTitle: 'Feedback-Formular',
+    phones: {
+      title: 'Telefone',
+      value: ['+7 (925) 104-73-46', '+3 (7533) 380-48-83', '+7 (925) 007-43-91'],
     },
+    managers: {
+      title: 'Manager',
+      value: [
+        { name: 'Ekaterina Pimchenko', pos: 'Führender Außenhandelsmanager' },
+        { name: 'Galina Lavitskaya', pos: 'Kaufmann im Groß-und Außenhandel' },
+        { name: 'Violetta Osmak', pos: 'Assistent des Außenhandelsmanagers' },
+      ],
+    },
+    emails: [''],
+    socials: [],
+    form: {
+      placeholders: {
+        name: 'Name',
+        msg: 'Nachricht',
+        email: 'Email',
+      },
+      sendButton: 'Schicken',
+      errors: {
+        name: '3-50 Briefe',
+        msg: 'Nachricht',
+        email: 'Geben Sie die richtige E-Mail-Adresse ein',
+      }
+    }
+  },
+  head: {
     title: 'Trading House «CSK» Ltd.',
-    copyright: ['© 2022 Powered by <a href="https://roboweb.site/"><strong>RoboWeb</strong></a>'],
-    productTitle: 'МДВП',
-    contacts: {
-      phones: ['+7 (925) 104-73-46'],
-      managers: [
-        { name: 'Ekaterina Pimchenko', pos: 'Leading Foreign Trade Manager' },
-        { name: 'Galina Lavitskaya', pos: 'Foreign Trade Manager' },
-        { name: 'Violetta Osmak', pos: 'Foreign Trade Manager Assistant' },
+    meta: [
+      {
+        name: 'keywords',
+        content: '',
+      },
+      {
+        name: 'description',
+        content: '',
+      },
+    ],
+  },
+  menu: ['Startseite', 'Produkte', 'Galerie', 'Kontakte'],
+  content: {
+    main: {
+      title: ['Trade House CBI', 'Center of Building Integration'],
+      subTitle: 'Hochwertige Naturprodukte für den Bau',
+      
+      text: 'Handelshaus "CSK" GmbH ist ein russisches Unternehmen, das sich seit 2016 eine breite Reihe von Baumaterialien für Bau und Renovierung anbietet. Dank unseren beruflichen Eigenschaften und hoeher Mobilität, wir sind immer da, wo Kunden ihre ehrgeizigsten Projekte realisieren, im Inn- und Ausland. Wir garantieren Produktqualität, pünktliche Lieferung, Verfügbarkeit der Ware im Lager und ein flexibles Rabattsystem. Handelshaus "CSK" GmbH arbeitet mit den größten Herstellern von Holzplattenmaterialien zusammen und hat auch eine Eigenherstellung von Schnittolz für den Bau und den Innenausbau. Hochqualifiziertes erfahrenes CSK-Team steht Ihnen mit Rat und Tat zur Verfügung.',
+      button: 'Kontaktiere uns',
+    },
+    catalog: {
+      title: ['Unsere Produkte'],
+      categoryCard: {
+        rightTitle: 'Produkte',
+      },
+    },
+    gallery: {
+      title: ['Anwendungsbeispiele'],
+      text: '',
+      imgGrid: [
+        'beltermo/floor.jpg',
+        'beltermo/instal.jpg',
+        'beltermo/kombi.jpg',
+        'beltermo/multi.jpg',
+        'beltermo/room.jpg',
+        'beltermo/ultra.jpg',
+        'beltermo/universal.jpg',
+        'beltermo/top.jpg',
+        'chipboard/product.jpg',
+        'fibreboard/product.jpg',
+        'lumber/product.jpg',
+        'mdf/product.jpg',
+        'osb/product.jpg',
+        'plywood/product.jpg',
       ],
-      emails: [''],
-      addresses: [
-        {
-          title: 'Офис',
-          value: 'Москва, Проектируемый проезд № 134, вл.4',
-          iframe: 'https://api-maps.yandex.ru/frame/v1/-/CCUYiXRD-B',
-        },
-      ],
-      socials: [],
-    },
-    workingHoars: {
-      title: 'Working hoars',
-      value: ['Ежедневно: <span class="text-bold">8:00–20:00</span>'],
-    },
-    head: {
-      title: 'Trading House «CSK» Ltd.',
-      meta: [
-        {
-          name: 'keywords',
-          content: '',
-        },
-        {
-          name: 'description',
-          content: '',
-        },
+      imgs: [
+        ['examples/example1.jpg', 'Innendämmung von Decken für Estriche ohne Fugen (Laminat, Parkett)'],
+        ['examples/example2.jpg', 'Innenwanddämmung'],
+        ['examples/example3.jpg', 'Gebäudedämmung'],
+        ['examples/example4.jpg', 'Außendämmung von Dächern von Fachwerkhäusern'],
+        ['examples/example5.jpg', 'Isolierung der Außenwände (Nassfassade) mit Beltermo-Platten'],
+        ['examples/example6.jpg', 'Boden- und Deckenisolierung'],
       ],
     },
-    content: {
-      main: {
-        title: ['<div class="text-6xl">Trading House «CSK» Ltd</div>'],
-        subTitle: 'Высокое качество по доступной цене',
-        price: 'от 139.5 руб/шт',
-        text: 'В основном используется в качестве отделочного материала для внешней облицовки зданий, но также подходит для дизайна внутренних интерьеров, обустройства бань, саун и беседок. Он имеет оптимальную ширину, поэтому в точности имитирует брус, при этом стоит недорого.',
-        img: 'images/main.png',
-      },
-      catalog: {
-        title: ['Размеры и цены на <span class="uppercase text-bp_green_2">пиломатериалы<span>'],
-        subTitle: 'У нас представлены товары разных размеров',
-      },
-      about: {
-        title: ['Пиломатериалы'],
-        subTitle: [
-          'Пиломатериал - натуральный материал, на замену, которому, пока не пришли синтетические материалы. <br/> Пиломатериал может быть хвойных (сосна, пихта, ель, кедр, лиственница) или лиственных пород (клен, береза, осина, дуб, тополь). В зависимости от распила, используемой древесины и размеров бревен, получаются разные по показателям изделия, которые применяют для различных конструкций и частей здания.',
-        ],
-        text: '',
-        animatedStats: [],
-      },
-      advantages: {
-        title: ['Преимущества <span class="uppercase text-bp_green_2">пиломатериала<span>'],
-        items: [
-          [
-            'Высокая несущая способность',
-            'Первый плюс пиломатериала в том, что при высокой несущей способности сам он имеет относительно легкий вес, что дает возможность возводить крепкие, и, вмете с тем, легкие конструкции. Примером тому служат деревянные дома, которые делаются на минимальном фундаменте.',
-          ],
-          [
-            'Быстрота и легкость монтажа',
-            'Другое преимущество пиломатериала — это быстрота и легкость монтажа. В этом пиломатериалу нет конкурентов. Никакой грязи, никакой техники, простота крепления и максимальная скорость. К тому же, если вы поставили в коттедже деревянные перекрытия, то можете смело приступать к продолжению работ, в отличие от бетона, после трудоемкой заливки которого еще примерно месяц нужно подождать.',
-          ],
-          [
-            'Экологичность',
-            'Экологическая чистота, то есть, пиломатериалы являются природным и естественным материалом, который не может нанести вред здоровью человеку.',
-          ],
-          [
-            'Универсальность',
-            'Пиломатериалы могут использоваться практически для любых конструкций. В отличие от металлов, они имеют множество возможностей и вариантов для использования.',
-          ],
-          [
-            'Способность "дышать"',
-            'Благодаря этому свойству пиломатериалы отлично впитывают лишнюю влагу при ее избыточном скоплении в доме, а затем, при понижении температуры, отдают ее обратно.',
-          ],
-          [
-            'Простота обработки',
-            'Пиломатериалы поддаются любым видам обработки, от простой шлифовки до сложных художественных работ. Кроме этого, пиломатериалы дают простор для творчества и фантазии.',
-          ],
-          [
-            'Тепло и звукоизоляция',
-            'Это свойство достигается за счет того, что древесина имеет пористую структуру.',
-          ],
-        ],
-        title2: ['Применение <span class="uppercase text-bp_green_2">пиломатериала<span>'],
-        items2: [
-          [
-            'Отборный сорт',
-            'Такой материал не имеет выраженных недочетов, на нем не будет трещин. Допустимо лишь малое количество сучков: два на один метр изделия. Используется для изготовления мебели премиум-класса и для отделки салона автомобилей.',
-          ],
-          [
-            'Первый сорт',
-            'Здесь больше возможное количество сучков и трещин, однако, полотно не должно иметь трухлявости, гнили и плесени. Применяется в строительстве.',
-          ],
-          [
-            'Второй сорт',
-            'Допустимы глубокие трещины и незначительные червоточины, но исключены трухлявость и гниль. Востребован в строительстве и производстве мебели.',
-          ],
-          [
-            'Третий сорт',
-            'Есть незначительное количество гнили, сквозных трещин и червоточин по всей поверхности древесины. Такой пиломатериал нашел применение для сооружения навесов, поддонов и транспортировочных ящиков.',
-          ],
-          [
-            'Четвертый сорт',
-            'Сюда относится древесину самого низкого качества, которая может быть использована для возведения конструкций и предметов, не требующих прочности и долговечности.',
-          ],
-        ],
-      },
-      gallery: {
-        title: ['Примеры использования <span class="uppercase text-bp_green_2">пиломатериала<span>'],
-        text: 'Пиломатериал применяется в самых разных областях строительства, для самых разных целей.',
-        imgs: [
-          ['examples/example1.jpg', 'Внутренняя изоляция перекрытий'],
-          ['examples/example2.jpg', 'Каркасное домостроение'],
-          ['examples/example3.jpg', 'Внутренние перегородки'],
-          ['examples/example4.jpg', 'Установка полов'],
-          ['examples/example5.jpg', 'Сооружение крыши'],
-          ['examples/example6.jpg', 'Создания опалубки'],
-        ],
-      },
-    },
-  };
-  
-  export default appEN;
-  
+  },
+};
+
+export default appEN;

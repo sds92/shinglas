@@ -4,11 +4,10 @@
 
 /* MONTSERRAT*/
 @font-face {
-  font-family: 'Montserrat';
-
-  src: local('Montserrat'),
-  local('Montserrat'),
-  url('../public/fonts/Montserrat-Medium.ttf');
+  font-family: 'Montserrat-light';
+  src: local('Montserrat-light'),
+  local('Montserrat-light'),
+  url('../public/fonts/Montserrat-Light.ttf');
 }
 
 @import './Preloader.css';

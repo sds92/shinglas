@@ -4,21 +4,27 @@ import { Text } from '../../../lib';
 import { FeedBack } from '../../';
 
 export default function Contacts(props) {
-  const {theme, data} = props
-  const {contacts} = data
+  const { theme, data } = props;
+  const { contacts } = data.app;
   const classes = {
-    contactsTitle: `pl-2 border-b border-${theme.borders.contacts} text-${theme.text.contactsSubTitle} w-full`,
+    contactsTitle: `flex pb-1 items-center uppercase font-bold border-${theme.borders.contacts} text-${theme.text.contactsSubTitle} w-full`,
   };
   return (
-    <div id={`Contacts`} className={`bg-${theme.bg.contacts} py-10`}>
-      <Text className={`zero:text-xl sm:text-5xl text-center font-bold text-${theme.text.contactsTitle}`}>Контакты</Text>
+    <div id={`Contacts`} className={`bg-${theme.bg.contacts} py-10 font-montserrat`}>
+      <Text className={`zero:text-xl sm:text-5xl text-center font-bold text-${theme.text.contactsTitle}`}>
+        {contacts.title}
+      </Text>
 
       <div className={`flex flex-col w-full`}>
         <div className={`w-full flex flex-col items-center sm:flex-row sm:gap-2 md:gap-10 my-2 `}>
           {/* FORM */}
           <div className={`w-full flex flex-col ml-auto sm:w-2/3 md:w-7/12 max-w-xl`}>
-          <Text className={`zero:text-sm sm:text-xl text-center font-bold text-${theme.text.contactsSubTitle}`}>Свяжитесь с нами</Text>
-            <FeedBack theme={theme} data={data}/>
+            <Text
+              className={`zero:text-sm sm:text-xl text-center uppercase font-bold text-${theme.text.contactsSubTitle}`}
+            >
+              {contacts.formTitle}
+            </Text>
+            <FeedBack theme={theme} data={data} contacts={contacts}/>
           </div>
 
           {/* CONTACTS */}
@@ -27,37 +33,23 @@ export default function Contacts(props) {
           >
             <div className={`sm:w-full w-1/2 my-1 flex flex-col `}>
               <div className={`flex mx-0.5 items-end`}>
-                <Icons.Phone extraClasses={`pl-1 w-6 h-6 border-b border-${theme.text.contactsIcon} text-${theme.text.contactsIcon}`} />
-                <p className={classes.contactsTitle}>Телефон:</p>
-              </div>
-              <div className={`ml-8 font-light`}>
-                <a href={`tel:${contacts.phones[0]}`}>
-                  {contacts.phones[0]}
-                </a>
-              </div>
-            </div>
-            <div className={`w-1/2 sm:w-full my-1 flex flex-col`}>
-              <div className={`flex mx-0.5 items-end`}>
-                <Icons.Mail extraClasses={`pl-1 text-center w-6 h-6 border-b border-${theme.text.contactsIcon} text-${theme.text.contactsIcon}`} />
-                <p className={classes.contactsTitle}>EMAIL:</p>
-              </div>
-              <Text className={`ml-8 font-light`}>{contacts.emails[0]}</Text>
-            </div>
-            <div className={`w-1/2 sm:w-full my-1 flex flex-col`}>
-              <div className={`flex mx-0.5 items-end`}>
-                <Icons.Location
-                  extraClasses={`pl-1 w-6 h-6 pt-0.5 border-b border-${theme.text.contactsIcon} text-${theme.text.contactsIcon}`}
+                <Icons.User
+                  extraClasses={`pl-1 w-8 h-8 border-${theme.text.contactsIcon} text-${theme.text.contactsIcon}`}
                 />
-                <p className={classes.contactsTitle}>АДРЕС:</p>
+                <p className={classes.contactsTitle}>{contacts.managers.title}</p>
               </div>
-              <Text className={`ml-8 font-light`}>{contacts.addresses[0].value}</Text>
-            </div>
-            <div className={`w-1/2 sm:w-full my-1 flex flex-col`}>
-              <div className={`flex mx-0.5 items-end`}>
-                <Icons.Clock extraClasses={`pl-0.5 w-6 h-6 border-b border-${theme.text.contactsIcon} text-${theme.text.contactsIcon}`} />
-                <p className={classes.contactsTitle}>ВРЕМЯ РАБОТЫ:</p>
-              </div>
-              <Text className={`ml-8 font-light`}>{contacts.workingHoars.value}</Text>
+              <div style={{height: 1, width: '100%', background: `#ff0000`}} className={`-mt-1`}/>
+              {contacts.managers.value.map((item, i) => {
+                return (
+                  <div key={`sdjfg${i}`} className={`ml-8 font-light my-1`}>
+                    <div >{contacts.managers.value[i].name}</div>
+                    <div className={`italic text-xs`}>{contacts.managers.value[i].pos}</div>
+                    <a className={``} href={`tel:${contacts.phones[0]}`}>{contacts.phones.value[i]}</a>
+                    
+                  </div>
+                  
+                );
+              })}
             </div>
           </div>
         </div>

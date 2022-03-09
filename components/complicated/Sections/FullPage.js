@@ -1,6 +1,7 @@
 import React from 'react';
 import Sections from './components';
 import { Link } from 'react-scroll';
+import ImgGrid from '../ImgGrid/ImgGrid';
 
 export default function FullPage({ ...props }) {
   const { menu } = props;
@@ -50,8 +51,8 @@ export default function FullPage({ ...props }) {
       <Sections.Main {...props} />
       <Sections.Catalog {...props} />
       {/* <Sections.Advantages {...props} /> */}
-      {/* <Sections.Gallery {...props} /> */}
-      {/* <Sections.Contacts {...props} /> */}
+      <Sections.Gallery {...props} />
+      <Sections.Contacts {...props} />
     </>
   );
 }

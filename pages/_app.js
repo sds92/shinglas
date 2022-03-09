@@ -27,11 +27,10 @@ function MyApp({ Component, pageProps }) {
 
   const newProps = {
     menu: [
-      ['Main', '#Main'],
-      ['Products', '#Catalog'],
-      ['Advantages', '#Advantages'],
-      ['Usage', '#Gallery'],
-      ['Contacts', '#Contacts'],
+      [data.app.menu[0], '#Main'],
+      [data.app.menu[1], '#Products'],
+      [data.app.menu[2], '#Gallery'],
+      [data.app.menu[3], '#Contacts'],
     ],
     w: w,
     data: data,
@@ -41,7 +40,6 @@ function MyApp({ Component, pageProps }) {
     lang,
     ...pageProps,
   };
-  console.log("🚀", newProps.data)
 
   return (
     <>

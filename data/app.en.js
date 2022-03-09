@@ -7,15 +7,23 @@ const appEN = {
     serv: 'https://xn--j1ano.com/',
   },
   title: 'Trading House «CSK» Ltd.',
-  copyright: ['© 2022 Powered by <a href="https://roboweb.site/"><strong>RoboWeb</strong></a>'],
+  copyright: ['© 2022 Powered by <a href="https://roboweb.team/" target=\"_blank\" rel=\"noopener noreferrer\"><strong>RoboWeb</strong></a>'],
   productTitle: 'МДВП',
   contacts: {
-    phones: ['+7 (925) 104-73-46', '+3 (7533) 380-48-83', '+7 (925) 007-43-91'],
-    managers: [
-      { name: 'Ekaterina Pimchenko', pos: 'Leading Foreign Trade Manager' },
-      { name: 'Galina Lavitskaya', pos: 'Foreign Trade Manager' },
-      { name: 'Violetta Osmak', pos: 'Foreign Trade Manager Assistant' },
-    ],
+    title: 'Contacts',
+    formTitle: 'Feedback form',
+    phones: {
+      title: 'Phones',
+      value: ['+7 (925) 104-73-46', '+3 (7533) 380-48-83', '+7 (925) 007-43-91'],
+    },
+    managers: {
+      title: 'Managers',
+      value: [
+        { name: 'Ekaterina Pimchenko', pos: 'Leading Foreign Trade Manager' },
+        { name: 'Galina Lavitskaya', pos: 'Foreign Trade Manager' },
+        { name: 'Violetta Osmak', pos: 'Foreign Trade Manager Assistant' },
+      ],
+    },
     emails: [''],
     addresses: [
       {
@@ -25,11 +33,26 @@ const appEN = {
       },
     ],
     socials: [],
+    workingHoars: {
+      title: 'Working hoars',
+      value: ['<span class="text-bold">8:00–20:00</span>'],
+    },
+    form: {
+
+      placeholders: {
+        name: 'Name',
+        msg: 'Message',
+        email: 'Email',
+      },
+      sendButton: 'Send',
+      errors: {
+        name: '3-50 letters',
+        msg: 'Message',
+        email: 'Enter correct email',
+      }
+    }
   },
-  workingHoars: {
-    title: 'Working hoars',
-    value: ['Ежедневно: <span class="text-bold">8:00–20:00</span>'],
-  },
+  menu: ['Main', 'Products', 'Gallery', 'Contacts'],
   head: {
     title: 'Trading House «CSK» Ltd.',
     meta: [
@@ -47,16 +70,15 @@ const appEN = {
     main: {
       title: ['Trade House CBI', 'Center of Building Integration'],
       subTitle: 'High quality natural products for building constructions',
-      price: 'от 139.5 руб/шт',
+      
       text: 'Trading House «CSK» Ltd. is a Russian company specializing in the supply of a wide range of materials for construction and repair since 2016. Thanks to our extensive professional connections and exceptional mobility, we are where clients realize their most ambitious projects in Russia and abroad. We guarantee the quality of products, prompt delivery, availability of goods in stock and a flexible system of discounts.',
       button: 'Contact us',
     },
     catalog: {
       title: ['Our products'],
       categoryCard: {
-          rightTitle: 'Products',
-      }
-    //   subTitle: 'У нас представлены товары разных размеров',
+        rightTitle: 'Products',
+      },
     },
     about: {
       title: ['Пиломатериалы'],
@@ -123,15 +145,31 @@ const appEN = {
       ],
     },
     gallery: {
-      title: ['Примеры использования <span class="uppercase">пиломатериала<span>'],
-      text: 'Пиломатериал применяется в самых разных областях строительства, для самых разных целей.',
+      title: ['Usage examples'],
+      text: '',
+      imgGrid: [
+        'beltermo/floor.jpg',
+        'beltermo/instal.jpg',
+        'beltermo/kombi.jpg',
+        'beltermo/multi.jpg',
+        'beltermo/room.jpg',
+        'beltermo/ultra.jpg',
+        'beltermo/universal.jpg',
+        'beltermo/top.jpg',
+        'chipboard/product.jpg',
+        'fibreboard/product.jpg',
+        'lumber/product.jpg',
+        'mdf/product.jpg',
+        'osb/product.jpg',
+        'plywood/product.jpg',
+      ],
       imgs: [
-        ['examples/example1.jpg', 'Внутренняя изоляция перекрытий'],
-        ['examples/example2.jpg', 'Каркасное домостроение'],
-        ['examples/example3.jpg', 'Внутренние перегородки'],
-        ['examples/example4.jpg', 'Установка полов'],
-        ['examples/example5.jpg', 'Сооружение крыши'],
-        ['examples/example6.jpg', 'Создания опалубки'],
+        ['examples/example1.jpg', 'Internal insulation of ceilings for screeding seamless floors (laminate, parquet board)'],
+        ['examples/example2.jpg', 'Internal wall insulation'],
+        ['examples/example3.jpg', 'Building insulation'],
+        ['examples/example4.jpg', 'External insulation of roofs of frame houses'],
+        ['examples/example5.jpg', 'Insulation of external walls (wet facade) with Beltermo plates'],
+        ['examples/example6.jpg', 'Floor and ceiling insulation '],
       ],
     },
   },

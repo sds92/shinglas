@@ -1,33 +1,39 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import Map from './Map';
 
-import { Icons } from '..';
-
+import { Icons, Logo } from '..';
+import { Text } from 'components/lib';
 
 export default function Footer(props) {
   const { theme, data } = props;
-  const Icon = Icons[props?.data?.logo || 'Belplit24'];
+
   return (
     <>
-      <div className={`h-96 cursor-default overflow-hidden`}>
-          <Map contacts={data.app.contacts} />
-      </div>
-      <footer className={`bg-${theme.bg.footer} overflow-hidden`}>
+      <footer className={`bg-zinc-800 overflow-hidden`}>
         <div className={`flex flex-col md:flex-row justify-between items-center h-full`}>
           <div className={`ml-0 sm:ml-10 md:ml-36 my-4`}>
-            <a href='index.html'>
-            <Icon fill={`${theme.logo}`} extraClasses={`${props?.data?.logo === 'WoodEco' ? 'w-16 h-16' : 'w-10 h-10'}`}  />
-            </a>
+            <Link
+              activeClass={`text-${theme.text.hover}`}
+              to={'Main'}
+              spy={true}
+              smooth={true}
+              offset={-64}
+              duration={100}
+              delay={0}
+              isDynamic={true}
+              ignoreCancelEvents={false}
+              spyThrottle={100}
+            >
+              <Logo extraClasses={`w-10 h-10 cursor-pointer`} />
+            </Link>
           </div>
 
           <div className={`my-4 flex items-center gap-6 text-${theme.text.footer} cursor-default mr-2`}>
-            <Icons.Roboweb extraClasses={`w-10 h-10`} fill={`${theme.logoRoboWeb}`}/>
-            <p>
-              © 2022. Сайт создан с помощью{' '}
-              <a className={`font-bold`} href='https://roboweb.team'>
-                RoboWeb.Team
-              </a>
-            </p>
+            <a target='_blank' rel='noopener noreferrer' href='https://roboweb.team/'>
+              <Icons.Roboweb extraClasses={`w-10 h-10`} fill={`${theme.logoRoboWeb}`} />
+            </a>
+            <Text className={`text-zinc-100`}>{data.app.copyright}</Text>
           </div>
         </div>
       </footer>
