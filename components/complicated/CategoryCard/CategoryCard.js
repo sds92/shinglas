@@ -21,7 +21,7 @@ export default function CategoryCard(props) {
             })}
           </div>
           <hr />
-          <a href={'#Contacts'}>
+          <a href={'#Contacts'} className={`md:hidden`}>
             <div
               className={`mx-auto my-2 ${theme.styles.buttons} text-${theme.text.buttons} bg-${
                 theme.bg.buttons

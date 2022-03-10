@@ -17,8 +17,7 @@ export default function Main(props) {
     <div
       id={`Main`}
       ref={ref}
-      style={{ minHeight: '600px' }}
-      className={`h-screen w-full flex items-center justify-between relative font-montserrat`}
+      className={`min-h-screen w-full flex items-center justify-between relative font-montserrat`}
     >
       <div className={`p-10 w-full md:w-6/12 flex items-center relative inset-0 z-10`}>
         <div className={`max-w-xl ml-auto cursor-default flex-col`}>
