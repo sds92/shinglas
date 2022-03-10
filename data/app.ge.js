@@ -67,7 +67,7 @@ const appEN = {
       title: ['Trade House CBI', 'Center of Building Integration'],
       subTitle: 'Hochwertige Naturprodukte für den Bau',
 
-      text: 'Handelshaus "CSK" GmbH ist ein russisches Unternehmen, das sich seit 2016 eine breite Reihe von Baumaterialien für Bau und Renovierung anbietet. Dank unseren beruflichen Eigenschaften und hoeher Mobilität, wir sind immer da, wo Kunden ihre ehrgeizigsten Projekte realisieren, im Inn- und Ausland. Wir garantieren Produktqualität, pünktliche Lieferung, Verfügbarkeit der Ware im Lager und ein flexibles Rabattsystem. Handelshaus "CSK" GmbH arbeitet mit den größten Herstellern von Holzplattenmaterialien zusammen und hat auch eine Eigenherstellung von Schnittolz für den Bau und den Innenausbau. Hochqualifiziertes erfahrenes CSK-Team steht Ihnen mit Rat und Tat zur Verfügung.',
+      text: ['Handelshaus "CSK" GmbH ist ein russisches Unternehmen, das sich seit 2016 eine breite Reihe von Baumaterialien für Bau und Renovierung anbietet. <br/><br/> Dank unseren beruflichen Eigenschaften und hoeher Mobilität, wir sind immer da, wo Kunden ihre ehrgeizigsten Projekte realisieren, im Inn- und Ausland. Wir garantieren Produktqualität, pünktliche Lieferung, Verfügbarkeit der Ware im Lager und ein flexibles Rabattsystem. <br/><br/>  Handelshaus "CSK" GmbH arbeitet mit den größten Herstellern von Holzplattenmaterialien zusammen und hat auch eine Eigenherstellung von Schnittolz für den Bau und den Innenausbau. Hochqualifiziertes erfahrenes CSK-Team steht Ihnen mit Rat und Tat zur Verfügung.'],
       button: 'Kontaktiere uns',
     },
     catalog: {

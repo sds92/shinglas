@@ -77,7 +77,7 @@ const appEN = {
       title: ['Trade House CBI', 'Center of Building Integration'],
       subTitle: 'High quality natural products for building constructions',
 
-      text: ['Trading House «CSK» Ltd. is a Russian company specializing in the supply of a wide range of materials for construction and repair since 2016. Thanks to our extensive professional connections and exceptional mobility, we are where clients realize their most ambitious projects in Russia and abroad. We guarantee the quality of products, prompt delivery, availability of goods in stock and a flexible system of discounts. <br/> TH «CSK» Ltd. cooperates with the largest manufacturers of wood-board materials, and also has its own production of lumber for construction and finishing. <br/> Trading House «CSK» Ltd. is a professional association of experienced managers, highly qualified specialists who have  many years of experience and are well versed in the specifics of the construction materials market.'],
+      text: ['Trading House «CSK» Ltd. is a Russian company specializing in the supply of a wide range of materials for construction and repair since 2016. Thanks to our extensive professional connections and exceptional mobility, we are where clients realize their most ambitious projects in Russia and abroad. We guarantee the quality of products, prompt delivery, availability of goods in stock and a flexible system of discounts. <br/><br/> TH «CSK» Ltd. cooperates with the largest manufacturers of wood-board materials, and also has its own production of lumber for construction and finishing. <br/><br/> Trading House «CSK» Ltd. is a professional association of experienced managers, highly qualified specialists who have  many years of experience and are well versed in the specifics of the construction materials market.'],
       button: 'Contact us',
     },
     catalog: {
@@ -87,70 +87,6 @@ const appEN = {
         rightTitle: 'Products',
         button: 'Ask for prices',
       },
-    },
-    about: {
-      title: ['Пиломатериалы'],
-      subTitle: [
-        'Пиломатериал - натуральный материал, на замену, которому, пока не пришли синтетические материалы. <br/> Пиломатериал может быть хвойных (сосна, пихта, ель, кедр, лиственница) или лиственных пород (клен, береза, осина, дуб, тополь). В зависимости от распила, используемой древесины и размеров бревен, получаются разные по показателям изделия, которые применяют для различных конструкций и частей здания.',
-      ],
-      text: '',
-      animatedStats: [],
-    },
-    advantages: {
-      title: ['Преимущества <span class="uppercase">пиломатериала<span>'],
-      items: [
-        [
-          'Высокая несущая способность',
-          'Первый плюс пиломатериала в том, что при высокой несущей способности сам он имеет относительно легкий вес, что дает возможность возводить крепкие, и, вмете с тем, легкие конструкции. Примером тому служат деревянные дома, которые делаются на минимальном фундаменте.',
-        ],
-        [
-          'Быстрота и легкость монтажа',
-          'Другое преимущество пиломатериала — это быстрота и легкость монтажа. В этом пиломатериалу нет конкурентов. Никакой грязи, никакой техники, простота крепления и максимальная скорость. К тому же, если вы поставили в коттедже деревянные перекрытия, то можете смело приступать к продолжению работ, в отличие от бетона, после трудоемкой заливки которого еще примерно месяц нужно подождать.',
-        ],
-        [
-          'Экологичность',
-          'Экологическая чистота, то есть, пиломатериалы являются природным и естественным материалом, который не может нанести вред здоровью человеку.',
-        ],
-        [
-          'Универсальность',
-          'Пиломатериалы могут использоваться практически для любых конструкций. В отличие от металлов, они имеют множество возможностей и вариантов для использования.',
-        ],
-        [
-          'Способность "дышать"',
-          'Благодаря этому свойству пиломатериалы отлично впитывают лишнюю влагу при ее избыточном скоплении в доме, а затем, при понижении температуры, отдают ее обратно.',
-        ],
-        [
-          'Простота обработки',
-          'Пиломатериалы поддаются любым видам обработки, от простой шлифовки до сложных художественных работ. Кроме этого, пиломатериалы дают простор для творчества и фантазии.',
-        ],
-        [
-          'Тепло и звукоизоляция',
-          'Это свойство достигается за счет того, что древесина имеет пористую структуру.',
-        ],
-      ],
-      title2: ['Применение <span class="uppercase">пиломатериала<span>'],
-      items2: [
-        [
-          'Отборный сорт',
-          'Такой материал не имеет выраженных недочетов, на нем не будет трещин. Допустимо лишь малое количество сучков: два на один метр изделия. Используется для изготовления мебели премиум-класса и для отделки салона автомобилей.',
-        ],
-        [
-          'Первый сорт',
-          'Здесь больше возможное количество сучков и трещин, однако, полотно не должно иметь трухлявости, гнили и плесени. Применяется в строительстве.',
-        ],
-        [
-          'Второй сорт',
-          'Допустимы глубокие трещины и незначительные червоточины, но исключены трухлявость и гниль. Востребован в строительстве и производстве мебели.',
-        ],
-        [
-          'Третий сорт',
-          'Есть незначительное количество гнили, сквозных трещин и червоточин по всей поверхности древесины. Такой пиломатериал нашел применение для сооружения навесов, поддонов и транспортировочных ящиков.',
-        ],
-        [
-          'Четвертый сорт',
-          'Сюда относится древесину самого низкого качества, которая может быть использована для возведения конструкций и предметов, не требующих прочности и долговечности.',
-        ],
-      ],
     },
     gallery: {
       title: ['Usage examples'],
