@@ -25,7 +25,6 @@ export default function (req, res) {
     text: text,
     html: html,
   };
-  console.log(mailData)
   transporter.sendMail(mailData, function (err, info) {
     if (err) {
       console.log("🚀 ~ file: sendform.js ~ line 32 ~ err", err)
