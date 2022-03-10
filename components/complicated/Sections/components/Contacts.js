@@ -18,9 +18,9 @@ export default function Contacts(props) {
       </Text>
 
       <div className={`flex flex-col w-full`}>
-        <div className={`w-full flex flex-col items-center sm:flex-row sm:gap-2 md:gap-10 my-2 `}>
+        <div className={`w-full flex flex-col items-center sm:items-start sm:flex-row sm:gap-2 md:gap-10 my-2 `}>
           {/* FORM */}
-          <div className={`w-full flex flex-col ml-auto sm:w-2/3 md:w-7/12 max-w-xl`}>
+          <div className={`w-full flex flex-col ml-auto sm:w-2/3 md:w-7/12 max-w-xl sm:mt-14`}>
             <Text
               className={`zero:text-sm sm:text-xl text-center uppercase font-bold text-${theme.text.contactsSubTitle}`}
             >
@@ -43,10 +43,11 @@ export default function Contacts(props) {
               <div style={{height: 1, width: '100%', background: `#ff0000`}} className={`-mt-1`}/>
               {contacts.managers.value.map((item, i) => {
                 return (
-                  <div key={`sdjfg${i}`} className={`ml-8 font-light my-1`}>
-                    <div >{contacts.managers.value[i].name}</div>
+                  <div  key={`sdjfg${i}`} className={`ml-8 font-light my-4 `}>
+                    <div style={{width: 300}} className={`border-b font-bold`}>{contacts.managers.value[i].name}</div>
                     <div className={`italic text-xs`}>{contacts.managers.value[i].pos}</div>
-                    <a className={``} href={`tel:${contacts.phones[0]}`}>{contacts.phones.value[i]}</a>
+                    <div className={`pl-4 text-sm`}>{contacts.emails[i]}</div>
+                    <a className={`pl-4 text-sm`} href={`tel:${contacts.phones[0]}`}>{contacts.phones.value[i]}</a>
                     
                   </div>
                   

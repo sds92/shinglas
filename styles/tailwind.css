@@ -5418,6 +5418,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-right-width: 1px;
 }
 
+.border-b{
+  border-bottom-width: 1px;
+}
+
 .border-zinc-600{
   --tw-border-opacity: 1;
   border-color: rgb(82 82 91 / var(--tw-border-opacity));
@@ -7264,6 +7268,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-underline-offset: 4px;
 }
 
+.underline-offset-2{
+  text-underline-offset: 2px;
+}
+
 .placeholder-zinc-100::-moz-placeholder{
   --tw-placeholder-opacity: 1;
   color: rgb(244 244 245 / var(--tw-placeholder-opacity));
@@ -7548,6 +7556,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .shadow-zinc-900{
   --tw-shadow-color: #18181b;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.outline-offset-2{
+  outline-offset: 2px;
 }
 
 .outline-zinc-100{
@@ -7914,6 +7926,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-left: 2.5rem;
   }
 
+  .sm\:mt-10{
+    margin-top: 2.5rem;
+  }
+
+  .sm\:mt-14{
+    margin-top: 3.5rem;
+  }
+
   .sm\:hidden{
     display: none;
   }
@@ -7944,6 +7964,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .sm\:flex-col{
     flex-direction: column;
+  }
+
+  .sm\:items-start{
+    align-items: flex-start;
   }
 
   .sm\:justify-center{
