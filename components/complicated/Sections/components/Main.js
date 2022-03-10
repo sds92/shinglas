@@ -13,7 +13,6 @@ export default function Main(props) {
     threshold: 0,
   });
 
-
   return (
     <div
       id={`Main`}
@@ -21,8 +20,8 @@ export default function Main(props) {
       style={{ minHeight: '600px' }}
       className={`h-screen w-full flex items-center justify-between relative font-montserrat`}
     >
-      <div className={`p-10 w-full md:w-6/12 flex items-center absolute md:relative inset-0 z-10`}>
-        <div className={`max-w-xl ml-auto -mt-10 cursor-defaultflex-col`}>
+      <div className={`p-10 w-full md:w-6/12 flex items-center relative inset-0 z-10`}>
+        <div className={`max-w-xl ml-auto cursor-default flex-col`}>
           <div>
             {lgView ? (
               <>
@@ -60,16 +59,19 @@ export default function Main(props) {
           <Text className={`${!lgView ? `text-center` : ``}`}>{main.subTitle}</Text>
           <br />
           <Text className={`my-4 font-light ${!lgView ? `text-center` : ``}`}>{main.text}</Text>
-          <div
-            className={`${lgView ? `` : `mx-auto`} ${theme.styles.buttons} text-${theme.text.buttons} bg-${theme.bg.buttons} hover:bg-bp_black active:scale-105 transition-colors`}
-            href={'#Contacts'}
-          >
-            {main.button}
-          </div>
+          <a href={'#Contacts'}>
+            <div
+              className={`${lgView ? `` : `mx-auto`} ${theme.styles.buttons} text-${theme.text.buttons} bg-${
+                theme.bg.buttons
+              } hover:bg-bp_black active:scale-105 transition-colors`}
+            >
+              {main.button}
+            </div>
+          </a>
         </div>
       </div>
-      <div className={`mx-auto ${w >= 768 ? '' : 'opacity-30'}`}>
-        <Logo className={`w-full h-full`}/>
+      <div className={`mx-auto ${w >= 768 ? '' : 'absolute opacity-30 inset-0'}`}>
+        <Logo className={`w-full h-full `} />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import { Icons } from '../../';
 import { Text } from '../../../lib';
 import { FeedBack } from '../../';
+import ImgGrid from 'components/complicated/ImgGrid/ImgGrid';
 
 export default function Contacts(props) {
   const { theme, data } = props;
@@ -10,8 +11,9 @@ export default function Contacts(props) {
     contactsTitle: `flex pb-1 items-center uppercase font-bold border-${theme.borders.contacts} text-${theme.text.contactsSubTitle} w-full`,
   };
   return (
-    <div id={`Contacts`} className={`bg-${theme.bg.contacts} py-10 font-montserrat`}>
-      <Text className={`zero:text-xl sm:text-5xl text-center font-bold text-${theme.text.contactsTitle}`}>
+    <div id={`Contacts`} className={`bg-${theme.bg.contacts} min-h-screen font-montserrat`}>
+      
+      <Text className={`py-10 zero:text-3xl sm:text-5xl text-center font-bold text-${theme.text.contactsTitle}`}>
         {contacts.title}
       </Text>
 
@@ -31,7 +33,7 @@ export default function Contacts(props) {
           <div
             className={`flex w-full flex-wrap sm:max-w-xl sm:flex-col sm:w-1/3 md:w-5/12 p-2 mr-auto mt-10 text-${theme.text.contactsSubTitle}`}
           >
-            <div className={`sm:w-full w-1/2 my-1 flex flex-col `}>
+            <div className={`w-full my-1 flex flex-col `}>
               <div className={`flex mx-0.5 items-end`}>
                 <Icons.User
                   extraClasses={`pl-1 w-8 h-8 border-${theme.text.contactsIcon} text-${theme.text.contactsIcon}`}
@@ -54,6 +56,7 @@ export default function Contacts(props) {
           </div>
         </div>
       </div>
+      <ImgGrid {...props}/>
     </div>
   );
 }

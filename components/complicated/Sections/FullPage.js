@@ -20,7 +20,7 @@ export default function FullPage({ ...props }) {
       <div
         id={`scroll-spy`}
         style={{}}
-        className={`z-50 mr-4 fixed flex flex-col justify-center gap-4 items-center h-screen w-4 top-0 right-0`}
+        className={`z-40 mr-4 fixed flex flex-col justify-center gap-4 items-center h-screen w-4 top-0 right-0`}
       >
         {menu.map((item, i) => {
           return (
@@ -50,7 +50,6 @@ export default function FullPage({ ...props }) {
       </div>
       <Sections.Main {...props} />
       <Sections.Catalog {...props} />
-      {/* <Sections.Advantages {...props} /> */}
       <Sections.Gallery {...props} />
       <Sections.Contacts {...props} />
     </>

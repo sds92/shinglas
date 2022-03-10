@@ -7,7 +7,9 @@ const appEN = {
     serv: 'https://xn--j1ano.com/',
   },
   title: 'Trading House «CSK» Ltd.',
-  copyright: ['© 2022 Powered by <a href="https://roboweb.team/" target=\"_blank\" rel=\"noopener noreferrer\"><strong>RoboWeb</strong></a>'],
+  copyright: [
+    '© 2022 Powered by <a href="https://roboweb.team/" target="_blank" rel="noopener noreferrer"><strong>RoboWeb</strong></a>',
+  ],
   productTitle: 'МДВП',
   contacts: {
     title: 'Contacts',
@@ -38,7 +40,6 @@ const appEN = {
       value: ['<span class="text-bold">8:00–20:00</span>'],
     },
     form: {
-
       placeholders: {
         name: 'Name',
         msg: 'Message',
@@ -49,8 +50,13 @@ const appEN = {
         name: '3-50 letters',
         msg: 'Message',
         email: 'Enter correct email',
-      }
-    }
+      },
+      statuses: {
+        pending: "Sending a request",
+        success: "Request sent successfully. Thank you for contacting.",
+        error: "An error has occurred. Try again. If the error persists, contact the site administration",
+      },
+    },
   },
   menu: ['Main', 'Products', 'Gallery', 'Contacts'],
   head: {
@@ -70,14 +76,16 @@ const appEN = {
     main: {
       title: ['Trade House CBI', 'Center of Building Integration'],
       subTitle: 'High quality natural products for building constructions',
-      
+
       text: 'Trading House «CSK» Ltd. is a Russian company specializing in the supply of a wide range of materials for construction and repair since 2016. Thanks to our extensive professional connections and exceptional mobility, we are where clients realize their most ambitious projects in Russia and abroad. We guarantee the quality of products, prompt delivery, availability of goods in stock and a flexible system of discounts.',
       button: 'Contact us',
     },
     catalog: {
       title: ['Our products'],
+      button: 'Choose',
       categoryCard: {
         rightTitle: 'Products',
+        button: 'Ask for prices',
       },
     },
     about: {
@@ -164,7 +172,10 @@ const appEN = {
         'plywood/product.jpg',
       ],
       imgs: [
-        ['examples/example1.jpg', 'Internal insulation of ceilings for screeding seamless floors (laminate, parquet board)'],
+        [
+          'examples/example1.jpg',
+          'Internal insulation of ceilings for screeding seamless floors (laminate, parquet board)',
+        ],
         ['examples/example2.jpg', 'Internal wall insulation'],
         ['examples/example3.jpg', 'Building insulation'],
         ['examples/example4.jpg', 'External insulation of roofs of frame houses'],

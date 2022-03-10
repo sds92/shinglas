@@ -7,7 +7,9 @@ const appEN = {
     serv: 'https://xn--j1ano.com/',
   },
   title: 'Trading House «CSK» Ltd.',
-  copyright: ['© 2022 Powered by <a href="https://roboweb.team/" target=\"_blank\" rel=\"noopener noreferrer\"><strong>RoboWeb</strong></a>'],
+  copyright: [
+    '© 2022 Powered by <a href="https://roboweb.team/" target="_blank" rel="noopener noreferrer"><strong>RoboWeb</strong></a>',
+  ],
   productTitle: 'МДВП',
   contacts: {
     title: 'Kontakte',
@@ -37,8 +39,14 @@ const appEN = {
         name: '3-50 Briefe',
         msg: 'Nachricht',
         email: 'Geben Sie die richtige E-Mail-Adresse ein',
-      }
-    }
+      },
+      statuses: {
+        pending: 'Senden einer Anfrage',
+        success: 'Anfrage erfolgreich gesendet. Vielen Dank für ihre Kontaktaufnahme',
+        error:
+          'Ein Fehler ist aufgetreten. Versuchen Sie es nochmal. Wenn der Fehler weiterhin besteht, wenden Sie sich an die Site-Administration',
+      },
+    },
   },
   head: {
     title: 'Trading House «CSK» Ltd.',
@@ -58,14 +66,16 @@ const appEN = {
     main: {
       title: ['Trade House CBI', 'Center of Building Integration'],
       subTitle: 'Hochwertige Naturprodukte für den Bau',
-      
+
       text: 'Handelshaus "CSK" GmbH ist ein russisches Unternehmen, das sich seit 2016 eine breite Reihe von Baumaterialien für Bau und Renovierung anbietet. Dank unseren beruflichen Eigenschaften und hoeher Mobilität, wir sind immer da, wo Kunden ihre ehrgeizigsten Projekte realisieren, im Inn- und Ausland. Wir garantieren Produktqualität, pünktliche Lieferung, Verfügbarkeit der Ware im Lager und ein flexibles Rabattsystem. Handelshaus "CSK" GmbH arbeitet mit den größten Herstellern von Holzplattenmaterialien zusammen und hat auch eine Eigenherstellung von Schnittolz für den Bau und den Innenausbau. Hochqualifiziertes erfahrenes CSK-Team steht Ihnen mit Rat und Tat zur Verfügung.',
       button: 'Kontaktiere uns',
     },
     catalog: {
       title: ['Unsere Produkte'],
+      button: 'Wählen',
       categoryCard: {
         rightTitle: 'Produkte',
+        button: 'Fragen Sie nach Preisen',
       },
     },
     gallery: {

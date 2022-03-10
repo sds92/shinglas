@@ -18,18 +18,8 @@ export default function Gallery(props) {
 
   return (
     <div ref={ref} id={`Gallery`} className={`mt-20 `}>
-      {gallery.title && (
-        <Text className={`zero:text-xl sm:text-5xl text-center font-bold my-4`}>{gallery.title}</Text>
-      )}
-      {gallery.text && (
-        <>
-          <Text className={`zero:text-sm sm:text-xl text-center py-4 max-w-5xl mx-auto font-light`}>
-            {gallery.text}
-          </Text>
-          <hr />
-          <br />
-        </>
-      )}
+      <Text className={`zero:text-3xl sm:text-5xl text-center font-bold my-4`}>{gallery.title}</Text>
+
       {gallery.imgs.length !== 0 && (
         <>
           <div ref={ref} className={`flex gap-4 flex-wrap justify-center md:w-10/12 lg:w-8/12 mx-auto`}>
@@ -70,8 +60,7 @@ export default function Gallery(props) {
           </div>
           <br />
           <hr />
-      <ImgGrid {...props}/>
-
+          {/* <ImgGrid {...props}/> */}
         </>
       )}
     </div>

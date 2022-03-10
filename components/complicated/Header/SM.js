@@ -2,8 +2,9 @@ import React from 'react';
 import styles from './Burger.module.sass';
 
 // etc
-import { Icons } from '../';
+import { Icons, Logo } from '../';
 import { Link } from 'react-scroll';
+import Lang from '../Lang/Lang';
 
 export default function SM(props) {
   const { theme, menu, data } = props;
@@ -18,17 +19,21 @@ export default function SM(props) {
           />
         </div>
         <div className={`basis-1/3 flex justify-center`}>
-          <a className={`self-center`} href='#main'>
-            <Icons.Belplit24 extraClasses={`w-10 h-10`} fill={theme.logo}/>
+          <a className={`self-center`} href='#Main'>
+            <Logo extraClasses={`w-10 h-10`} />
           </a>
         </div>
-        <div className={`basis-1/3`}></div>
+        <div className={`basis-1/3 px-2 flex`}>
+          <div className={`flex bg-white rounded-md py-1 px-1 items-center mx-auto`}>
+            <Lang {...props} />
+          </div>
+        </div>
 
         {isActive ? <div onClick={() => setIsActive(!isActive)} className={styles.overlay}></div> : ''}
       </nav>
       <div className={`relative`} style={{ marginTop: '-60px' }}>
         <nav
-          style={{ top: '60px', left: 0, maxWidth: '260px' }}
+          style={{ top: '60px', left: 0, width: '200px' }}
           className={`${isActive ? `translate-x-0` : `-translate-x-72`} bg-${
             theme.bg.header
           } transition-all flex flex-col absolute h-screen z-50`}
@@ -58,17 +63,9 @@ export default function SM(props) {
             ))}
           </div>
           <div className={`flex flex-col mt-10 text-${theme.text.header}`}>
-            <a
-              onClick={() => setIsActive(!isActive)}
-              className={styles.burger_list_tel}
-              href={`tel:${data.app.contacts.phones[0]}`}
-            >
-              {data.app.contacts.phones[0]}
-            </a>
-            <p className={styles.burger_list_address}>{data.app.contacts.addresses[0].value}</p>
             <div className={`flex justify-center`}>
-              <a className={`self-center`} href='#main'>
-                <Icons.Belplit24 extraClasses={`w-20 h-20`} fill={theme.logo}/>
+              <a className={`self-center`} href='#Main'>
+                <Logo extraClasses={`w-20 h-20`} />
               </a>
             </div>
           </div>

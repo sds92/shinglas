@@ -32,7 +32,7 @@ export default function Catalog(props) {
 
   return (
     <>
-      <div id={`Products`} className={`cursor-default min-h-screen flex flex-col font-montserrat`}>
+      <div id={`Products`} className={`mt-10 cursor-default min-h-screen flex flex-col font-montserrat`}>
         <div>
           <motion.div
             className={`font-bold text-3xl text-${theme.text.bodyTitle}`}
@@ -42,7 +42,7 @@ export default function Catalog(props) {
             variants={animations.slideUp.variants}
             transition={animations.slideUp.transition}
           >
-            <Text className={`zero:text-xl sm:text-5xl text-center font-bold my-4 text-zinc-900`}>
+            <Text className={`zero:text-5xl sm:text-5xl text-center font-bold my-4 text-zinc-900`}>
               {catalog.title}
             </Text>
           </motion.div>
@@ -69,7 +69,7 @@ export default function Catalog(props) {
                               })
                             }
                           >
-                            Выбрать
+                            {catalog.button}
                             <Icons.ChevronDown
                               extraClasses={`w-6 h-6 transition-all ${open ? `rotate-180` : ''}`}
                             />
@@ -84,11 +84,11 @@ export default function Catalog(props) {
                         key={`NAVLGINNER${index}`}
                         onClick={() => {
                           setState((state) => {
-                            return { ...state, chosen: item.category, chosenId: item.id };
+                            return { ...state, chosenCategory: item.id };
                           });
                         }}
                       >
-                        &nbsp;{item.category}
+                        &nbsp;{item.title.toUpperCase()}
                       </MenuItem>
                     ))}
                   </Menu>
@@ -134,6 +134,9 @@ export default function Catalog(props) {
             {/* CATALOG ITEMS */}
             <div className={`max-w-7xl mx-auto overflow-hidden flex flex-wrap items-center justify-center`}>
               <CategoryCard
+                catalog={catalog}
+                lgView={lgView}
+                theme={theme}
                 categoryId={state.chosenCategory}
                 category={categories.find((item) => item.id === state.chosenCategory)}
                 app={app}

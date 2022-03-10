@@ -2,8 +2,6 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import styles from './FeedBack.module.css';
 
-import InputMask from 'react-input-mask';
-
 export default function FeedBack(props) {
   const { theme, data, contacts } = props;
   const router = useRouter();
@@ -28,14 +26,14 @@ export default function FeedBack(props) {
   async function checkForm() {
     let res = false;
     let a = Promise.resolve(/^[а-я, А-Я, a-z, A-Z]{3,20}$/.test(formState.clientName));
-    let b = Promise.resolve(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/.test(formState.clientPhone.replaceAll(' ', '')));
+    // let b = Promise.resolve(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/.test(formState.clientPhone.replaceAll(' ', '')));
     let c = formState.body === '' ? true : Promise.resolve(/.{3,500}/.test(formState.body));
     let d = Promise.resolve(
             /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(
               formState.clientEmail
             )
           );
-    const values_1 = await Promise.all([a, b, c, d]);
+    const values_1 = await Promise.all([a, c, d]);
     res = true;
     values_1.map((item, index) => {
       if (!item) {
@@ -72,7 +70,7 @@ export default function FeedBack(props) {
       props.onFulfilled('loading');
     } catch (err) {}
 
-    fetch(`${data.api.email}`, {
+    fetch(`${data.app.api.email}`, {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',
@@ -80,8 +78,8 @@ export default function FeedBack(props) {
       },
       body: JSON.stringify({
         ...formState,
-        fromSite: data.url,
-        to: data.contacts.emails[0],
+        fromSite: 'woodeco.site',
+        to: contacts.emails[0],
       }),
     })
       .then((res) => {
@@ -110,6 +108,7 @@ export default function FeedBack(props) {
         setFormStatus('error');
         setTimeout(() => {
           setFormStatus('show');
+          resetForm();
         }, 3000);
       });
   }
@@ -187,13 +186,13 @@ export default function FeedBack(props) {
             </div>
           </div>
         )}
-        {formStatus === 'pending' && <p className={`text-center py-10 text-zinc-100`}>Отправка запроса</p>}
+        {formStatus === 'pending' && <p className={`text-center py-10 text-zinc-100`}>{contacts.form.statuses.pending}</p>}
         {formStatus === 'complete' && (
-          <p className={`text-center py-10 text-zinc-100`}>Запрос успешно отправлен. Спасибо за обращение!</p>
+          <p className={`text-center py-10 text-zinc-100`}>{contacts.form.statuses.success}Запрос успешно отправлен. Спасибо за обращение!</p>
         )}
         {formStatus === 'error' && (
           <p className={`text-center py-10 text-zinc-100`}>
-            Произошла ошибка. Попробуйте еще раз. Если ошибка повторится обратитесь к администрации сайта.
+            {contacts.form.statuses.error}Произошла ошибка. Попробуйте еще раз. Если ошибка повторится обратитесь к администрации сайта.
           </p>
         )}
       </form>

@@ -3,16 +3,16 @@ import { Icons } from '..';
 import { Text } from 'components/lib';
 
 export default function CategoryCard(props) {
-  const { category, products, app, categoryId } = props;
+  const { category, products, app, categoryId, theme, lgView, catalog } = props;
   const [state, setState] = React.useState({});
 
   React.useEffect(() => {
-    setState({})
-  }, [categoryId])
+    setState({});
+  }, [categoryId]);
 
   return (
     <div className={`w-full flex zero:flex-col md:flex-row`}>
-      <div className={`zero:basis-1 md:basis-1/2 border-r pr-4`}>
+      <div className={`zero:basis-1 md:basis-1/2 border-r md:pr-4`}>
         <div className={`font-bold text-3xl my-4 text-center`}>{category.title}</div>
         <div className={`flex flex-col`}>
           <div className={`flex flex-wrap items-center justify-center`}>
@@ -20,7 +20,16 @@ export default function CategoryCard(props) {
               return <img className={`rounded-md`} key={`dkfljhk${i}`} src={`images/${item}`}></img>;
             })}
           </div>
-          <hr/>
+          <hr />
+          <a href={'#Contacts'}>
+            <div
+              className={`mx-auto my-2 ${theme.styles.buttons} text-${theme.text.buttons} bg-${
+                theme.bg.buttons
+              } hover:bg-bp_black active:scale-105 transition-colors`}
+            >
+              {catalog.categoryCard.button}
+            </div>
+          </a>
           <div className={`text-center my-4`}>
             <Text>{category.desc}</Text>
           </div>
@@ -45,7 +54,7 @@ export default function CategoryCard(props) {
                     style={{
                       height: '30px',
                     }}
-                    className={`ml-2 px-1 pt-0.5 rounded-md hover:bg-bp_red hover:bg-opacity-70 cursor-pointer ${
+                    className={`ml-2 px-1 pt-0.5 rounded-md hover:bg-bp_red_2 hover:text-zinc-100 cursor-pointer ${
                       state[i] ? 'bg-bp_red text-zinc-100 hover:bg-opacity-100 shadow-md' : 'text-zinc-900'
                     }`}
                   >
@@ -59,7 +68,9 @@ export default function CategoryCard(props) {
                 >
                   {item.img && <img className={`w-1/2`} src={`images/${item.img}`}></img>}
                   {item.desc.length !== 0 && (
-                    <div className={`rounded-md shadow-md font-light text-zinc-50 bg-zinc-600 p-4 mt-1 border-zinc-600`}>
+                    <div
+                      className={`rounded-md shadow-md font-light text-zinc-50 bg-zinc-600 p-4 mt-1 border-zinc-600`}
+                    >
                       <Text>{item.desc}</Text>
                     </div>
                   )}
@@ -67,7 +78,11 @@ export default function CategoryCard(props) {
                     {item.options.map((option, ii) => {
                       return (
                         <div key={`FADACA${ii}`} className={`flex flex-col`}>
-                          <div className={`h-7 py-1 whitespace-nowrap font-bold mt-2 rounded-md w-min text-zinc-900 px-2`}>{option.title}</div>
+                          <div
+                            className={`h-7 py-1 whitespace-nowrap font-bold mt-2 rounded-md w-min text-zinc-900 px-2`}
+                          >
+                            {option.title}
+                          </div>
                           <div className={`ml-3`}>
                             {option.value.map((value, iii) => (
                               <div className={``} key={`GASHFDS${iii}`}>
@@ -79,8 +94,8 @@ export default function CategoryCard(props) {
                       );
                     })}
                   </div>
-                  <hr/>
-                  <br/>
+                  <hr />
+                  <br />
                 </div>
               </div>
             );
