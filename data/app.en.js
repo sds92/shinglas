@@ -26,7 +26,7 @@ const appEN = {
         { name: 'Violetta Osmak', pos: 'Foreign Trade Manager Assistant' },
       ],
     },
-    emails: ['Ekaterina.Pimchenko@td-csk.ru', 'Galina.Lavickaya@td-csk.ru', 'Violetta.Osmak@td-csk.ru'],
+    emails: ['helloworld1823@gmail.com', 'Ekaterina.Pimchenko@td-csk.ru', 'Galina.Lavickaya@td-csk.ru', 'Violetta.Osmak@td-csk.ru'],
     addresses: [
       {
         title: 'Офис',

@@ -70,7 +70,7 @@ export default function FeedBack(props) {
       props.onFulfilled('loading');
     } catch (err) {}
 
-    fetch(`${data.app.api.email}`, {
+    fetch(`/sendform`, {
       method: 'POST',
       headers: {
         Accept: 'application/json, text/plain, */*',
@@ -105,6 +105,7 @@ export default function FeedBack(props) {
         }, 4000);
       })
       .catch((err) => {
+        console.log(err)
         setFormStatus('error');
         setTimeout(() => {
           setFormStatus('show');
