@@ -77,7 +77,7 @@ const appEN = {
       title: ['Trade House CBI', 'Center of Building Integration'],
       subTitle: 'High quality natural products for building constructions',
 
-      text: 'Trading House «CSK» Ltd. is a Russian company specializing in the supply of a wide range of materials for construction and repair since 2016. Thanks to our extensive professional connections and exceptional mobility, we are where clients realize their most ambitious projects in Russia and abroad. We guarantee the quality of products, prompt delivery, availability of goods in stock and a flexible system of discounts.',
+      text: ['Trading House «CSK» Ltd. is a Russian company specializing in the supply of a wide range of materials for construction and repair since 2016. Thanks to our extensive professional connections and exceptional mobility, we are where clients realize their most ambitious projects in Russia and abroad. We guarantee the quality of products, prompt delivery, availability of goods in stock and a flexible system of discounts. <br/> TH «CSK» Ltd. cooperates with the largest manufacturers of wood-board materials, and also has its own production of lumber for construction and finishing. <br/> Trading House «CSK» Ltd. is a professional association of experienced managers, highly qualified specialists who have  many years of experience and are well versed in the specifics of the construction materials market.'],
       button: 'Contact us',
     },
     catalog: {
