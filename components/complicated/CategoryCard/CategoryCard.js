@@ -21,11 +21,10 @@ export default function CategoryCard(props) {
             })}
           </div>
           <hr />
-          <a href={'#Contacts'} className={`md:hidden`}>
+          <a href={'#Contacts'} className={`zero:hidden md:block`}>
             <div
-              className={`mx-auto my-2 ${theme.styles.buttons} text-${theme.text.buttons} bg-${
-                theme.bg.buttons
-              } hover:bg-bp_black active:scale-105 transition-colors`}
+              className={`mx-auto my-2 ${theme.styles.buttons} text-${theme.text.buttons} bg-${theme.bg.buttons
+                } hover:bg-bp_black active:scale-105 transition-colors`}
             >
               {catalog.categoryCard.button}
             </div>
@@ -46,25 +45,22 @@ export default function CategoryCard(props) {
                   onClick={() => setState((s) => ({ ...s, [i]: !state[i] }))}
                 >
                   <Icons.ChevronDown
-                    className={`transition-all active:scale-105 cursor-pointer w-8 h-8 border rounded-md bg-zinc-600 shadow-md text-white hover:bg-bp_red_2 ${
-                      state[i] ? '' : '-rotate-90 '
-                    }`}
+                    className={`transition-all active:scale-105 cursor-pointer w-8 h-8 border rounded-md bg-zinc-600 shadow-md text-white hover:bg-bp_red_2 ${state[i] ? '' : '-rotate-90 '
+                      }`}
                   />
                   <Text
                     style={{
                       height: '30px',
                     }}
-                    className={`ml-2 px-1 pt-0.5 rounded-md hover:bg-bp_red_2 hover:text-zinc-100 cursor-pointer ${
-                      state[i] ? 'bg-bp_red text-zinc-100 hover:bg-opacity-100 shadow-md' : 'text-zinc-900'
-                    }`}
+                    className={`ml-2 px-1 pt-0.5 rounded-md hover:bg-bp_red_2 hover:text-zinc-100 cursor-pointer ${state[i] ? 'bg-bp_red text-zinc-100 hover:bg-opacity-100 shadow-md' : 'text-zinc-900'
+                      }`}
                   >
                     {item.title}
                   </Text>
                 </div>
                 <div
-                  className={`flex flex-col ${
-                    state[i] ? 'max-h-screen opacity-100' : 'h-0 opacity-0'
-                  } overflow-hidden my-1 transition-all`}
+                  className={`flex flex-col ${state[i] ? 'max-h-screen opacity-100' : 'h-0 opacity-0'
+                    } overflow-hidden my-1 transition-all`}
                 >
                   {item.img && <img className={`w-1/2`} src={`images/${item.img}`}></img>}
                   {item.desc.length !== 0 && (
@@ -96,10 +92,19 @@ export default function CategoryCard(props) {
                   </div>
                   <hr />
                   <br />
+
                 </div>
               </div>
             );
           })}
+          <a href={'#Contacts'} className={`md:hidden`}>
+            <div
+              className={`mx-auto my-2 ${theme.styles.buttons} text-${theme.text.buttons} bg-${theme.bg.buttons
+                } hover:bg-bp_black active:scale-105 transition-colors`}
+            >
+              {catalog.categoryCard.button}
+            </div>
+          </a>
         </div>
       </div>
     </div>

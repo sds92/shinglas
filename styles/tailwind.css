@@ -7849,6 +7849,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: 0.75rem;
   }
 
+  .zero\:hidden{
+    display: none;
+  }
+
   .zero\:h-48{
     height: 12rem;
   }
@@ -8018,6 +8022,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:ml-36{
     margin-left: 9rem;
+  }
+
+  .md\:block{
+    display: block;
+  }
+
+  .md\:hidden{
+    display: none;
   }
 
   .md\:h-96{
