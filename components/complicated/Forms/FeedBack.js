@@ -188,11 +188,11 @@ export default function FeedBack(props) {
         )}
         {formStatus === 'pending' && <p className={`text-center py-10 text-zinc-100`}>{contacts.form.statuses.pending}</p>}
         {formStatus === 'complete' && (
-          <p className={`text-center py-10 text-zinc-100`}>{contacts.form.statuses.success}Запрос успешно отправлен. Спасибо за обращение!</p>
+          <p className={`text-center py-10 text-zinc-100`}>{contacts.form.statuses.success}</p>
         )}
         {formStatus === 'error' && (
           <p className={`text-center py-10 text-zinc-100`}>
-            {contacts.form.statuses.error}Произошла ошибка. Попробуйте еще раз. Если ошибка повторится обратитесь к администрации сайта.
+            {contacts.form.statuses.error}
           </p>
         )}
       </form>
