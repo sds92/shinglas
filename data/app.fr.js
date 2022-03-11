@@ -8,7 +8,7 @@ const appEN = {
   },
   title: 'Trading House «CSK» Ltd.',
   copyright: [
-    '© 2022 Powered by <a href="https://roboweb.team/" target="_blank" rel="noopener noreferrer"><strong>RoboWeb</strong></a>',
+    '© 2022 Powered by <a href="https://roboweb.team/" target="_blank" rel="noopener noreferrer"><strong>RoboWeb.Team</strong></a>',
   ],
   productTitle: '',
   contacts: {
