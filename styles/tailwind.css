@@ -1060,12 +1060,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 50;
 }
 
-.z-10{
-  z-index: 10;
-}
-
 .z-40{
   z-index: 40;
+}
+
+.z-10{
+  z-index: 10;
 }
 
 .row-span-2{
@@ -1921,10 +1921,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1rem;
 }
 
-.-mt-10{
-  margin-top: -2.5rem;
-}
-
 .-ml-1{
   margin-left: -0.25rem;
 }
@@ -2043,6 +2039,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .-mt-6{
   margin-top: -1.5rem;
+}
+
+.-mt-10{
+  margin-top: -2.5rem;
 }
 
 .-mt-11{
@@ -2593,20 +2593,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 3.5rem;
 }
 
-.h-20{
-  height: 5rem;
-}
-
 .h-16{
   height: 4rem;
+}
+
+.h-20{
+  height: 5rem;
 }
 
 .h-screen{
   height: 100vh;
 }
 
-.h-24{
-  height: 6rem;
+.h-52{
+  height: 13rem;
 }
 
 .h-4{
@@ -2627,10 +2627,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-1{
   height: 0.25rem;
-}
-
-.h-52{
-  height: 13rem;
 }
 
 .max-h-screen{
@@ -2675,8 +2671,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 3.5rem;
 }
 
-.w-24{
-  width: 6rem;
+.w-52{
+  width: 13rem;
 }
 
 .w-4{
@@ -2697,10 +2693,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-0{
   width: 0px;
-}
-
-.w-52{
-  width: 13rem;
 }
 
 .min-w-full{
@@ -2817,59 +2809,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .animate-bounce{
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
-}
-
-@-webkit-keyframes pulse{
-  50%{
-    opacity: .5;
-  }
-}
-
-@keyframes pulse{
-  50%{
-    opacity: .5;
-  }
-}
-
-.animate-pulse{
-  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@-webkit-keyframes ping{
-  75%, 100%{
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes ping{
-  75%, 100%{
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-.animate-ping{
-  -webkit-animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-@-webkit-keyframes spin{
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin{
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin{
-  -webkit-animation: spin 1s linear infinite;
-          animation: spin 1s linear infinite;
 }
 
 .cursor-pointer{
@@ -6545,10 +6484,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.25rem;
 }
 
-.pt-10{
-  padding-top: 2.5rem;
-}
-
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -6571,6 +6506,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-6{
   padding-top: 1.5rem;
+}
+
+.pt-10{
+  padding-top: 2.5rem;
 }
 
 .pt-11{
@@ -6991,14 +6930,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1rem;
 }
 
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-5xl{
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-base{
@@ -7266,10 +7205,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .underline-offset-4{
   text-underline-offset: 4px;
-}
-
-.underline-offset-2{
-  text-underline-offset: 2px;
 }
 
 .placeholder-zinc-100::-moz-placeholder{
@@ -7558,10 +7493,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.outline-offset-2{
-  outline-offset: 2px;
-}
-
 .outline-zinc-100{
   outline-color: #f4f4f5;
 }
@@ -7832,13 +7763,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 0px){
-  .zero\:inset-0{
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-  }
-
   .zero\:mx-auto{
     margin-left: auto;
     margin-right: auto;
@@ -7895,6 +7819,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1.25rem;
   }
 
+  .zero\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .zero\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -7905,19 +7834,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 1rem;
   }
 
-  .zero\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .zero\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .zero\:text-5xl{
-    font-size: 3rem;
-    line-height: 1;
   }
 
   .zero\:font-bold{
@@ -7928,10 +7847,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 640px){
   .sm\:ml-10{
     margin-left: 2.5rem;
-  }
-
-  .sm\:mt-10{
-    margin-top: 2.5rem;
   }
 
   .sm\:mt-14{
@@ -8012,14 +7927,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px){
-  .md\:relative{
-    position: relative;
-  }
-
-  .md\:right-0{
-    right: 0px;
-  }
-
   .md\:ml-36{
     margin-left: 9rem;
   }
