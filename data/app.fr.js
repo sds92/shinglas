@@ -26,7 +26,8 @@ const appEN = {
         { name: 'Violetta Osmak', pos: 'Assistante Responsable Commerce Extérieur' },
       ],
     },
-    emails: ['Ekaterina.Pimchenko@td-csk.ru', 'Galina.Lavickaya@td-csk.ru', 'Violetta.Osmak@td-csk.ru'],
+    emails: ['ekaterina.Pimchenko@td-csk.ru', 'galina.Lavickaya@td-csk.ru', 'violetta.Osmak@td-csk.ru'],
+
     socials: [],
     form: {
       placeholders: {

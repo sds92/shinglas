@@ -45,8 +45,8 @@ export default function Contacts(props) {
                 return (
                   <div  key={`sdjfg${i}`} className={`ml-8 font-light my-4 `}>
                     <div style={{width: 300}} className={`border-b font-bold`}>{contacts.managers.value[i].name}</div>
-                    <div className={`italic text-xs`}>{contacts.managers.value[i].pos}</div>
-                    <div className={`pl-4 text-sm`}>{contacts.emails[i]}</div>
+                    <div className={`text-sm`}>{contacts.managers.value[i].pos}</div>
+                    <div className={`pl-4 text-sm flex items-center`}><Icons.Mail className={`h-8`}/>{contacts.emails[i]}</div>
                     <a className={`pl-4 text-sm`} href={`tel:${contacts.phones[0]}`}>{contacts.phones.value[i]}</a>
                     
                   </div>
