@@ -64,7 +64,7 @@ const appEN = {
   menu: ["Page d'accueil", 'Des produits', 'Galerie', 'Contacts'],
   content: {
     main: {
-      title: ['Trade House CSK', 'Center of Building Integration'],
+      title: ['Trading House CSK', 'Center of Building Integration'],
       subTitle: 'Produits naturels de haute qualité pour la construction de bâtiments',
 
       text: ["SARL MC «CSK» spécialisée dans la fourniture d'une large gamme de matériaux pour la construction et la réparation depuis 2016. SARL MC «CSK» coopère avec les plus grands fabricants de matériaux en bois et en panneaux, et possède également sa propre production de bois pour la construction et la finition. Grâce à nos relations professionnelles étendues et à notre mobilité exceptionnelle, nous sommes là où les clients réalisent leurs projets les plus ambitieux en Russie et à l'étranger. Nous garantissons la qualité des produits, la Livraison rapide, la disponibilité des marchandises en stock et un système de réduction flexible. SARL MC «CSK» est une Association professionnelle de gestionnaires expérimentés, spécialistes de la plus haute qualification, qui ont de nombreuses années d'expérience et connaissent parfaitement les spécificités du marché des matériaux de construction."],
